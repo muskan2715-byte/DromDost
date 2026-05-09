@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | DromDost</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path d="M3 9.5L12 3L21 9.5V20A1 1 0 0 1 20 21H4A1 1 0 0 1 3 20V9.5Z"
+                  stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 21V12H15V21" stroke="white" stroke-width="2"/>
+        </svg>
+        <span>DromDost</span>
+    </div>
+
+    <nav class="nav-links">
+        <a href="Start.html">Home</a>
+        <a href="Register.html">Register</a>
+    </nav>
+</header>
+
+<!-- LOGIN SECTION -->
+<section style="min-height:calc(100vh - 140px); display:flex; align-items:center;">
+    <div class="container slide-up">
+
+        <h2>Welcome Back</h2>
+        <p style="text-align:center; color:#666; margin-bottom:20px;">
+            Login to continue finding your perfect roommate
+        </p>
+
+        <form id="loginform">
+
+            <input type="email" id="emaillogin" placeholder="Email Address" required>
+
+            <input type="password" id="loginpas" placeholder="Password" required>
+
+            <button type="submit" class="btn">Login</button>
+
+        </form>
+
+        <p style="text-align:center; margin-top:15px;">
+            Don’t have an account?
+            <a href="Register.html">Register</a>
+        </p>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 DromDost
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
