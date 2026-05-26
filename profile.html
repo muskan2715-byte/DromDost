@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <header>
     <div class="logo">🏠 DromDost</div>
     <nav class="nav-links">
@@ -15,73 +14,113 @@
         <a href="matches.html">Matches</a>
     </nav>
 </header>
-
 <div class="container profile-container">
     <h2>Complete Your Profile</h2>
     <p style="text-align:center; color:#666; margin-bottom:25px;">
         Tell us more so we can find the best roommate for you
     </p>
-
     <form id="Profiletype" class="profile-form">
+
+        <input type="text" id="city" placeholder="📍 Your City (e.g. Mumbai)" required>
+        <input type="number" id="age" placeholder="🎂 Your Age" min="17" max="80" required>
+
+        <select id="gender">
+            <option value="prefer_not_to_say">⚧ Select Your Gender</option>
+            <option value="male">🚹 Male</option>
+            <option value="female">🚺 Female</option>
+            <option value="non_binary">⚧ Non-Binary</option>
+            <option value="prefer_not_to_say">Prefer not to say</option>
+        </select>
 
         <select id="Profession" onchange="showProfessionFields()">
             <option value="">💼 Select Profession</option>
-            <option value="student">Student</option>
-
+            <option value="student">🎓 Student</option>
             <option value="working">💻 Working Professional</option>
+            <option value="freelancer">🧑‍💻 Freelancer</option>
+            <option value="entrepreneur">🚀 Entrepreneur</option>
+            <option value="other">🔘 Other</option>
         </select>
 
         <div id="studentField" style="display:none;">
             <input type="text" id="studycourse" placeholder="📚 Course / Degree">
         </div>
-
         <div id="workingField" style="display:none;">
             <input type="text" id="workfield" placeholder="🏢 Work Field">
         </div>
 
-        <input type="file" id="profilePic">
-
         <select id="sleep">
-            <option>😴 Early Sleeper</option>
-            <option>🌙 Night Owl</option>
+            <option value="before_9pm">🌅 Early Sleeper (before 9pm)</option>
+            <option value="9pm_11pm">😴 Normal (9pm–11pm)</option>
+            <option value="11pm_1am">🌙 Night Owl (11pm–1am)</option>
+            <option value="after_1am">🦉 Very Late (after 1am)</option>
         </select>
 
         <select id="study">
-            <option>📖 Morning Study</option>
-            <option>🌃 Night Study</option>
-            <option>🔄 Random</option>
+            <option value="needs_silence">🤫 Needs Silence</option>
+            <option value="ok_with_noise">🔊 OK with Noise</option>
+            <option value="wears_headphones">🎧 Wears Headphones</option>
+            <option value="flexible">🔄 Flexible</option>
         </select>
 
-        <input type="number" id="clean" placeholder="🧹 Cleanliness (1–5)">
-        <input type="number" id="budget" placeholder="💰 Monthly Budget">
+        <select id="clean">
+            <option value="5">✨ Very Clean (5)</option>
+            <option value="4">🧹 Clean (4)</option>
+            <option value="3">👌 Moderate (3)</option>
+            <option value="2">😌 Relaxed (2)</option>
+            <option value="1">🛋️ Messy (1)</option>
+        </select>
+
+        <input type="number" id="budget" placeholder="💰 Max Monthly Budget (₹)" min="0" required>
 
         <select id="food">
-            <option>🥗 Veg</option>
-            <option>🍗 Non-Veg</option>
-            <option>🍽️ Both</option>
+            <option value="veg">🥗 Vegetarian</option>
+            <option value="non_veg">🍗 Non-Vegetarian</option>
+            <option value="vegan">🌱 Vegan</option>
+            <option value="jain">🙏 Jain</option>
+            <option value="eggetarian">🥚 Eggetarian</option>
+            <option value="no_preference">🍽️ No Preference</option>
         </select>
 
         <select id="Gender">
-            <option>🚹 Male</option>
-            <option>🚺 Female</option>
-            <option>⚧ Other</option>
+            <option value="no_preference">👥 Preferred Roommate Gender</option>
+            <option value="male">🚹 Male</option>
+            <option value="female">🚺 Female</option>
+            <option value="non_binary">⚧ Non-Binary</option>
+            <option value="no_preference">🤝 No Preference</option>
         </select>
 
         <select id="language">
-            <option>🗣️ Hindi</option>
-            <option>🗣️ English</option>
-            <option>🗣️ Both</option>
+            <option value="Hindi">🗣️ Hindi</option>
+            <option value="English">🗣️ English</option>
+            <option value="Hindi,English">🗣️ Hindi & English</option>
+            <option value="Tamil">🗣️ Tamil</option>
+            <option value="Telugu">🗣️ Telugu</option>
+            <option value="Marathi">🗣️ Marathi</option>
+            <option value="Bengali">🗣️ Bengali</option>
+            <option value="Gujarati">🗣️ Gujarati</option>
+        </select>
+
+        <select id="smoking">
+            <option value="false">🚭 Smoking Not Allowed</option>
+            <option value="true">🚬 Smoking Allowed</option>
+        </select>
+
+        <select id="drinking">
+            <option value="false">🚫 Drinking Not Allowed</option>
+            <option value="true">🍻 Drinking Allowed</option>
+        </select>
+
+        <select id="pets">
+            <option value="false">🚫 No Pets</option>
+            <option value="true">🐾 Pets Allowed</option>
         </select>
 
         <button type="submit" class="btn">Save Profile</button>
-
     </form>
 </div>
-
 <footer>
     © 2025 DromDost
 </footer>
-
-<script src="js/app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
